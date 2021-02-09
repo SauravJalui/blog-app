@@ -29,6 +29,7 @@ class BlogUpdateView(UpdateView):
     fields = ['title', 'body']
 
 class BlogDeleteView(DeleteView):
+    '''This view deletes the selected post through the app'''
     model = Post
     template_name = 'post_delete.html'
     success_url = reverse_lazy('home')
